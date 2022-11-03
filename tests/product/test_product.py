@@ -1,5 +1,29 @@
-# from inventory_report.inventory.product import Product
+from inventory_report.inventory.product import Product
 
 
 def test_cria_produto():
-    pass  # Seu teste deve ser escrito aqui
+    id = 1
+    produto = 'Café Zen'
+    empresa = 'Espresso'
+    fab = '2022-10-31'
+    val = '2024-10-31'
+    serie = '1234'
+    instruction = 'em ambiente fresco'
+
+    product = Product(id, produto, empresa, fab, val, serie, instruction)
+
+    # retorno_de_product = (
+    #         f"O produto {produto}"
+    #         f" fabricado em {fab}"
+    #         f" por {empresa} com validade"
+    #         f" até {val}"
+    #         f" precisa ser armazenado {instruction}."
+    #     )
+
+    assert product.id == id
+    assert product.nome_do_produto == produto
+    assert product.nome_da_empresa == empresa
+    assert product.data_de_fabricacao == fab
+    assert product.data_de_validade == val
+    assert product.numero_de_serie == serie
+    assert product.instrucoes_de_armazenamento == instruction
