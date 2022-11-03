@@ -23,7 +23,7 @@ class SimpleReport:
     def validity(cls, product):
         date_time = datetime.datetime.now()
         return min([item["data_de_validade"] for item in product if (
-                        item["data_de_validade"] > str(date_time)
+                        item["data_de_validade"] > str(date_time.date())
                 )]
             )
 
