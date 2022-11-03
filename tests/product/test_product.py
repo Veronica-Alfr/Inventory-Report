@@ -12,14 +12,6 @@ def test_cria_produto():
 
     product = Product(id, produto, empresa, fab, val, serie, instruction)
 
-    # retorno_de_product = (
-    #         f"O produto {produto}"
-    #         f" fabricado em {fab}"
-    #         f" por {empresa} com validade"
-    #         f" até {val}"
-    #         f" precisa ser armazenado {instruction}."
-    #     )
-
     assert product.id == id
     assert product.nome_do_produto == produto
     assert product.nome_da_empresa == empresa
