@@ -35,4 +35,4 @@ class SimpleReport:
                 count_products[item["nome_da_empresa"]] += 1
             else:
                 count_products[item["nome_da_empresa"]] = 1
-        return max(count_products)
+        return max(count_products, key=count_products.get)
