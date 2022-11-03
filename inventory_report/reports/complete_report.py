@@ -12,7 +12,7 @@ class CompleteReport(SimpleReport):
                 count_products[item["nome_da_empresa"]] = 1
         phrase_return = ""
         for key, value in count_products.items():
-            stock += f"- {key}: {value}\n"
+            phrase_return += f"- {key}: {value}\n"
         return (
             f"{super().generate(product)}\n"
             f"Produtos estocados por empresa:\n"
