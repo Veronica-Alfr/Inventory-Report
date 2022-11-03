@@ -2,8 +2,8 @@ from inventory_report.reports.simple_report import SimpleReport
 
 
 class CompleteReport(SimpleReport):
-   @classmethod
-   def generate(cls, product):
+    @classmethod
+    def generate(cls, product):
         count_products = dict()
         for item in product:
             if item["nome_da_empresa"] in count_products.keys():
