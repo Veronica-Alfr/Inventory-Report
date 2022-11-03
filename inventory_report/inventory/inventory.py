@@ -6,7 +6,6 @@ from inventory_report.reports.complete_report import CompleteReport
 
 
 class Inventory:
-
     @classmethod
     def import_data(cls, path, report):
         data = cls.change_path(path)
@@ -24,5 +23,5 @@ class Inventory:
             with open(path) as json_file:
                 return json.loads(json_file.read())
         elif path.endswith('xml'):
-              with open(path) as xml_file:
+            with open(path) as xml_file:
                 return xmltodict.parse(xml_file.read())["dataset"]["record"]
